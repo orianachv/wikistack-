@@ -1,21 +1,27 @@
 {% extends "layout.html" %} {% block content %}
 
-
-
+<br />
+<br />
+<br />
+<br />
 <h3>Pages</h3>
-<hr>
+<hr />
 <ul class="list-unstyled">
-
   {% for page in pages %}
   <li>
-    <a href={{page.urlTitle}}>{{page.title}}</a>
+    <a href="{{page.urlTitle}}">{{ page.title }}</a>
   </li>
   {% endfor %}
-
 </ul>
 
 <form action="/wiki/search" method="get">
-  <input type="text" name="search" placeholder="search tag" class="form-control">
-  <button type="submit" class="btn btn-primary">Submit </button>
+  <input
+    type="text"
+    name="search"
+    placeholder="search tag"
+    class="form-control"
+  />
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
 {% endblock %}

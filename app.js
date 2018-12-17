@@ -20,7 +20,7 @@ app.use('/', routes);
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public')));
-models.User.sync({})
+models.User.sync({ force: false })
   .then(function() {
     return models.Page.sync({});
   })
